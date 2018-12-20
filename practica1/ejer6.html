@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio6</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<h3 style="margin-bottom: 1em;">Que pase de Kg a otra unidad de medida de masa, mostrar en pantalla un menú con las opciones posibles.</h3>
+	<table border="2">
+		<thead>
+			<tr><td cellspan="3">MENU DE MEDIDAS</td></tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1. Kilogramo </td>
+				<td>2. Gramo</td>
+				<td>3.Miligramo </td>
+				<td><a href="#" onclick="calcular()"> Pinchame para Calcular Medidas</a> </td>
+			</tr>
+			</tbody>
+		
+	</table>
+<script type="text/javascript">
+	function calcular(){
+	var medidas = {1:"Kilogramo", 2:"Gramo", 3:"Miligramo"};
+	var p1 = prompt("Con los numeros de la tabla escribe la medida que desees convertir, 1.	Kilogramo, 2. Gramo, 3.Miligramo");
+	var p11 =prompt("Escribe la cantidad de " + medidas[p1]);
+	var p11 = parseInt(p11);
+	var p2 = prompt("Deseas llevar la medida" +" " + medidas[p1] + " A,  1.	Kilogramo, 2. Gramo, 3.Miligramo" );
+	var p22 = parseInt(p2);
+	if (p1 ==1 && p2 ==1){
+		document.write("La medida es la misma");
+	}
+		else if(p1 == 1 && p2 ==2){
+			var x = p11*1000;
+			document.write("La conversion es " + x + medidas[p2]);
+		}
+		else if(p1 == 1 && p2 ==3){
+			var x = p11*10000;
+			document.write("La conversion es " + x + medidas[p2]);
+		}
+
+	}
+</script>
+</body>
+</html>

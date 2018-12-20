@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dibujando lineas</title>
+</head>
+<body>
+	<h2>Dibujando flechas con canvas</h2>
+	<canvas width="300" height="300" id="area">
+		</canvas>
+		<p>Mueve las flechas del teclado para dibujar</p>
+		<!--En el objeto document es donde se ve que tecla del teclado ha sido teclado con el metodo Keydown  -->
+<script type="text/javascript">
+	var teclas = {
+	LEFT:37,
+	UP:38,
+	RIGHT:39,
+	DOWN:40
+};
+console.log(teclas);
+document.addEventListener("keyup", dibujarTeclado);
+var cuadro = document.getElementById("area");
+var papel = cuadro.getContext("2d");
+var x = 150;
+var y = 150;
+dibujarLinea("red", 149, 149, 151, 151, papel);
+	function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo)
+{
+  lienzo.beginPath();
+  lienzo.strokeStyle = color;
+  lienzo.lineWidth = 3;
+  lienzo.moveTo(xinicial, yinicial);
+  lienzo.lineTo(xfinal, yfinal);
+  lienzo.stroke();
+  lienzo.closePath();
+}
+
+function dibujarTeclado( evento){
+	var colorM = "fd4c5d";
+	var movimientoP = 10;
+	switch(evento.keyCode){
+		case teclas.UP: 
+		dibujarLinea(colorM, x, y, x, y - movimientoP, papel);
+			y = y - movimientoP;
+		break;
+		case teclas.DOWN: 
+		dibujarLinea(colorM, x, y, x, y + movimientoP, papel);
+			y = y + movimientoP;
+		break;
+		case teclas.LEFT: 
+		dibujarLinea(colorM, x, y, x  - movimientoP, y , papel);
+			x = x - movimientoP;
+		break;
+		case teclas.RIGHT:
+		dibujarLinea(colorM, x , y, x + movimientoP, y , papel);
+			x = x + movimientoP; 
+		break;
+	}
+}
+
+
+</script>
+</body>
+</html>

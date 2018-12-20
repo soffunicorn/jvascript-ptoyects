@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 7 y ultimo</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h4 style="margin-bottom:1em;"> Que calcule el sueldo que le corresponde al trabajador de una empresa que cobra 40.000 euros anuales, el programa debe realizar los cálculos en función de los siguientes criterios:<br>
+
+a.       Si lleva más de 10 años en la empresa se le aplica un aumento del 10%.<br>
+b.      Si lleva menos de 10 años pero más que 5 se le aplica un aumento del 7%.<br>
+c.       Si lleva menos de 5 años pero más que 3 se le aplica un aumento del 5%.<br>
+d.      Si lleva menos de 3 años se le aplica un aumento del 3%<br></h4>
+
+<script type="text/javascript">
+	var anos = prompt("Escribir en numero la cantidad de a#os que tiene el trabajador");
+	var anos = parseInt(anos);
+		if (anos <= 3){
+			var porcentaje = (40000 *3) / 100;
+			var total = 40000 + porcentaje;
+			document.write("El sueldo del trabajador es " + total + " Euros");
+		}
+	
+		 if (anos > 5 && anos < 10 ){
+				var porcentaje = (40000 *7) / 100;
+			var total = 40000 + porcentaje;
+			document.write("El sueldo del trabajador es " + total + " Euros");
+
+			}
+			if (anos > 3 && anos < 5){
+					var porcentaje = (40000 *5) / 100;
+			var total = 40000 + porcentaje;
+			document.write("El sueldo del trabajador es " + total + " Euros");
+			}
+			if (anos >= 10){
+			var porcentaje = 40000 *10/ 100;
+			var total = 40000 + porcentaje;
+			document.write("El sueldo del trabajador es " + total + " Euros");}
+</script>
+</body>
+</html>

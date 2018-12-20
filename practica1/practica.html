@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica</title>
+	<meta utf="8">
+</head>
+<body>
+	<h1>Hola</h1>
+	<script type="text/javascript">
+		var contador = 0;
+		var nombres = [];
+			function tesaludo(nombre){
+			document.write("Hola, queridos" + " " + nombre + "<br>");
+				}
+	var respuesta = prompt("quieres escribir nombres de tus amigos 1. si 2. No");
+		while(respuesta == 1){
+		var nom =prompt("escribe el nombre y te saludo");
+		 nombres[contador] = nom;
+		 respuesta = prompt("quieres escribir nombres de tus amigos 1. si 2. No");
+		 contador = contador + 1;
+			}
+				console.log(nombres);
+				document.write(nombres[0]);
+
+				for (var i = 0; i < nombres.length; i++){
+					document.write(nombres[i] + "<br>");
+				}
+	
+	</script>
+</body>
+</html>

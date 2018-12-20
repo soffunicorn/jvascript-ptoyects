@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica</title>
+	<style type="text/css">
+	.div-boton{
+		display:inline-block;
+	}
+		.btn{
+			color:#000;
+			backround-color:#f2f2f2;
+			width:200px;
+			height:50px;
+		}
+		.btn-show{
+			background-color:black;
+			color:#fff;
+			width:100px;
+			height:50px;
+			position: relative;
+			left:2em;
+		}
+		.ul-res{
+			-webkit-transition: width 2s; 
+    		transition: width 2s;
+    		display:none;
+    		width:10%;
+    		background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<div class="div-boton">
+		<button type="button" class="btn" id="rojo">coloco el fondo en rojo</button>
+		<button type="button" class="btn" id="azul">coloco el fondo en azul</button>
+		<button type="button" class="btn" id="amarillo">coloco el fondo en amarillo</button>
+		<button type="button" class="btn" id="rosado"> coloco el fondo en rosado </button>
+		<button type="button" class="btn" id="purpura"> coloco el fondo en purpura</button>
+	</div>
+
+	<div class="ul">
+		<button class="btn-show" id="showul">CLICK</button>
+		<ul class="ul-res" id="ulr">
+			<li>PRUEBA</li>
+			<li>PRUEBA</li>
+			<li>PRUEBA</li>
+			<li>PRUEBA</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		 uno = document.getElementById("rojo");
+		uno.addEventListener("click", color);
+		 dos = document.getElementById("amarillo");
+		dos.addEventListener("click", colora);
+		function color(){
+			var x = "red";
+			document.body.style.background=x;
+			}
+			function colora(){
+			document.body.style.background="yellow";
+			}
+			moo = document.getElementById("showul");
+		moo.addEventListener("click", mostrar);
+			function mostrar(){
+				w = document.getElementById("ulr").style.display="block";
+				q = document.getElementById("ulr").style.transition= "width 2s"
+				e = document.getElementById("ulr").style.width="40%";;
+			}
+			</script>
+</body>
+</html>

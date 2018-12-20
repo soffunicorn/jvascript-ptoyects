@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Mer web</title>
+<meta charset="UTF-8">
+<body>
+
+<h1>PRUEBA</h1>
+<form id="primero" name="primero">
+<input type="text" name="look" id="look"/>
+<input type="submit" value="Buscar" id="boton">
+</form>
+<script type="text/javascript">
+	
+	//function saludo(alum)
+//{
+		//var alumnoNota = {"Luis":20, "Juan":15, "Paul":03, "Romina":20, "Raquel":17, "Elena":12, "Elias":14,"Lucrecia":05, "Stefany":13, "Mario":11};
+
+	//var elementos = document.forms["primero"].elements[0].value;
+	//document.write(elementos + " Prueba");
+	//if (elementos == alumnoNota["elementos"]){
+		//alert('Encontrado');}
+	//else { alert("No encontrado");}	
+	
+//}
+	(function(){
+		var buscar = function(){
+			var alumnoNota = {"Luis":20, "Juan":15, "Paul":03, "Romina":20, "Raquel":17, "Elena":12, "Elias":14,"Lucrecia":05, "Stefany":13, "Mario":11};
+			var elementos = document.getElementById("look").value;
+
+		if (elementos == alumnoNota["elementos"]){
+		alert('Encontrado');}
+	else { alert("No encontrado");}
+		};
+		var boton = document.getElementById("boton");
+		boton.addEventListener("click", buscar);
+
+	}())
+
+</script>
+</body>
+</html>

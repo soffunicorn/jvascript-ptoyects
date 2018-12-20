@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio</title>
+	<style type="text/css">
+		.btn{
+			padding: 15px;
+			background-color: pink;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="click" onclick="http()" class="btn">Click on me to see the information</button>
+	<div id="Informacion"></div>
+	<script type="text/javascript">
+		function ajax(){
+			
+			/*if(window.XMLHttpRequest){
+				Ajax = new XMLHttpRequest(); //Para verificar navs nuevo
+			}else{
+				Ajax = new ActiveXObject("Microsfot.XMLHttpRequest"); //para nav viejos
+			}*/
+			var prueba = new XMLHttpRequest();
+		console.log(prueba);
+			 prueba.onreadystatechange = function(){
+				if (prueba.readyState === 4 && prueba.status === 200){ //Si la peticion fue finalizada y hecha con exito haz lo siguiente
+				document.getElementById("Informacion").innerHTML = prueba.responseText;
+				}
+				prueba.open("GET", "mitext.html", true);
+				prueba.send();
+			}
+		}
+		function http() {
+    // Define http_request
+    var httpRequest;
+    try 
+    {
+    httpRequest = new XMLHttpRequest();// Mozilla, Safari, etc    
+    }
+    catch(trymicrosoft)
+    {
+        try
+        {
+            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");//PARA viejos
+        }
+        catch(oldermicrosoft)
+        {
+            try
+            {
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(failed)
+            {
+                httpRequest = false;
+            }
+        }
+    }
+    if(!httpRequest)
+    {
+        alert('Your browser does not support Ajax.');
+        return false;
+    }
+    
+    // Action http_request
+    httpRequest.onreadystatechange = function() 
+    {
+        if(httpRequest.readyState == 4)
+            if(httpRequest.status == 200)
+             document.getElementById("Informacion").innerHTML= httpRequest.responseText;
+            else
+                alert('Request Error: '+httpRequest.status);    
+    }
+    httpRequest.open('GET', "mitext.html", true);
+    httpRequest.send(null);
+            
+}
+
+</script>  
+
+	</script>
+</body>
+</html>

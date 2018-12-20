@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peso</title>
+</head>
+<body>
+	<h1>Tu peso en muchos planetas</h1>
+<script type="text/javascript">
+	var usuario = prompt("Cuanto pesas?");
+var g_terra = 9.8;
+var g_marte = 3.7;
+var g_jupiter = 24.8;
+var peso = parseFloat(usuario);
+var masa = peso/g_terra; // Masa en la tierra. pero la masa de un objetro no cambia
+console.log(masa);
+var p_marte = masa*g_marte;
+p_marte = parseInt(p_marte); //Primero se ejecuta lo de la derecha y luego lo de la izq de la igualdad
+
+
+document.write("Tu peso en marte es " + p_marte);
+</script>
+</body>
+</html>

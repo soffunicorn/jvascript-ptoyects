@@ -1,0 +1,19 @@
+#home{
+	background-color: #140830;
+}
+#home .in{color: #fff;}
+.border-right{
+	border-right-style:dotted;
+	border-right-color:#fff; 
+	border-right-width: 1px;
+}
+.sides{
+	min-height:800px;
+}
+.navbar-head{
+	background-color: transparent;
+	color:#000;
+}
+.navbar-head ul li a{
+	color:#000;
+}
